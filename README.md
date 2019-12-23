@@ -27,11 +27,13 @@
 
 # How to play  
 1. **Input**:
-    * To guess a letter, press the key
+    * To guess a letter, press the key corrosponding to the letter
+        - enter is not needed
+        - '~' to exit gracefully
 2. **Rules**:
     - If you guess right
         + The letter fills in the _
     - If you guess wrong
         + You will lose a health point
     - If you lose all your health
-        + you lose
+        + You lose

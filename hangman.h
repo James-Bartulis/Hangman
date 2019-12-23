@@ -17,6 +17,7 @@ public:
 	void Logic();
 
 	bool isOver();
+	bool isNotChar();
 	bool isChrInStr();
 	bool isChrInStr(char a, std::string b);
 	bool isWin();

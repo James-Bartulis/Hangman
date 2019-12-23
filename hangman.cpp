@@ -53,6 +53,7 @@ void Hangman::Input(){
 	guess = toupper(guess);
 }
 void Hangman::Logic(){
+	if(isNotChar()) return;
 	bool win = true;
 	if(!isChrInStr()){
 		mistakes++;
@@ -70,7 +71,24 @@ void Hangman::Logic(){
 bool Hangman::isOver(){
 	return GameOver;
 }
-
+bool Hangman::isNotChar(){
+	if(guess == '\r' || guess == '\t' || guess == ' ' ||
+		guess == ';' || guess == '\'' || guess == ':' ||
+		guess == '[' || guess == ']' || guess == '\\' ||
+		guess == '{' || guess == '}' || guess == '|' ||
+		guess == '"' || guess == '~' || guess == ',' ||
+		guess == '.' || guess == '/' || guess == '<' ||
+		guess == '>' || guess == '?' || guess == '-' ||
+		guess == '=' || guess == '_' || guess == '+' ||
+		guess == '1' || guess == '2' || guess == '3' ||
+		guess == '4' || guess == '5' || guess == '6' ||
+		guess == '7' || guess == '8' || guess == '9' ||
+		guess == '0' || guess == '!' || guess == '@' ||
+		guess == '#' || guess == '$' || guess == '%' ||
+		guess == '^' || guess == '&' || guess == '*' ||
+		guess == '(' || guess == ')' || guess == '`') return true;
+	return false;
+}
 bool Hangman::isChrInStr(){
 	for(int i = 0; i < Answer.size(); i++)
 		if(Answer[i] == guess)
