@@ -47,7 +47,7 @@ void Hangman::Display(){
 			cout << "_ ";
 }
 void Hangman::Input(){
-	guess = _getch();
+	guess = getch();
 	if(guess == '~')
 		GameOver = true;
 	guess = toupper(guess);
